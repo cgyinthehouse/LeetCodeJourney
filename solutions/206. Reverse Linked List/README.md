@@ -79,7 +79,7 @@ current_node = ??                 # ❌ next 指向 prev 之後，舊的 next �
 
 3️⃣ 如果有 3 個指標 (`prev_node`, `current_node`, `next_node`)：  
 ```python
-next_node = next_node.next        # 解決 2️⃣ 的問題，先把舊的節點存起來。
+next_node = current_node.next     # 解決 2️⃣ 的問題，先把舊的節點存起來。
 current_node.next = prev_node     # 反轉。
 prev_node = current_node          # 移動 prev 到 current 的位置。
 current_node = next_node          # 移動 current 到 next_node 的位置。
